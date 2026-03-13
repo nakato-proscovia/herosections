@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Hero Sections | #FromCommsToCode</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&family=Fraunces:ital,wght@0,300;1,600&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+
+    /* ── GLOBAL ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'DM Sans', sans-serif; }
+
+    /* Label for each hero */
+    .hero-label {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 18px 20px;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-bottom: 3px solid #C0392B;
+    }
+    .hero-label span { color: #C0392B; font-weight: 700; }
+
+    /* ═══════════════════════════════════════
+       HERO 1 — FULL BACKGROUND IMAGE + OVERLAY
+       Brand: Luxury Travel | Cinematic Dark
+    ════════════════════════════════════════ */
+    .hero-1 {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        url('https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=1600&q=80')
+        center/cover no-repeat;
+    }
+
+    .hero-1::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(5,5,5,0.88) 0%,
+        rgba(5,5,5,0.5) 55%,
+        rgba(5,5,5,0.1) 100%
+      );
+    }
+
+    .h1-nav {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 60px;
+      z-index: 10;
+    }
+
+    .h1-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .h1-logo small {
+      font-size: 9px;
+      letter-spacing: 4px;
+      color: #C9A84C;
+      font-weight: 300;
+    }
+
+    .h1-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .h1-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .h1-links a:hover { color: #C9A84C; }
+
+    .h1-book {
+      background: #C9A84C;
+      color: #000 !important;
+      padding: 10px 24px;
+      border-radius: 2px;
+      font-weight: 600 !important;
+    }
+
+    .h1-content {
+      position: relative;
+      z-index: 5;
+      padding: 0 60px;
+      max-width: 700px;
+    }
+
+    .h1-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .h1-line { width: 36px; height: 1px; background: #C9A84C; }
+
+    .h1-eyebrow span {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #C9A84C;
+    }
+
+    .h1-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(52px, 7vw, 90px);
+      font-weight: 300;
+      line-height: 1;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+
+    .h1-title em { font-style: italic; color: #E8C97A; }
+    .h1-title strong { display: block; font-weight: 600; }
+
+    .h1-desc {
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.8;
+      max-width: 440px;
+      margin-bottom: 40px;
+    }
+
+    .h1-ctas { display: flex; gap: 16px; align-items: center; }
+
+    .h1-btn-primary {
+      background: #C9A84C;
+      color: #000;
+      padding: 15px 36px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.3s;
+    }
+
+    .h1-btn-primary:hover { background: #E8C97A; }
+
+    .h1-btn-secondary {
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      padding-bottom: 3px;
+      transition: border-color 0.3s;
+    }
+
+    .h1-btn-secondary:hover { border-color: #C9A84C; color: #C9A84C; }
+
+    .h1-stats {
+      position: absolute;
+      bottom: 40px;
+      left: 60px;
+      right: 60px;
+      display: flex;
+      gap: 48px;
+      z-index: 5;
+    }
+
+    .h1-stat { display: flex; flex-direction: column; gap: 4px; }
+
+    .h1-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: #C9A84C;
+      line-height: 1;
+    }
+
+    .h1-stat-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .h1-stat-div {
+      width: 1px;
+      background: rgba(255,255,255,0.1);
+      align-self: stretch;
+    }
+
+
+    /* ═══════════════════════════════════════
+       HERO 2 — SPLIT LAYOUT (text left, image right)
+       Brand: Tech Startup | Clean & Modern
+    ════════════════════════════════════════ */
+    .hero-2 {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: #F7F5F2;
+    }
+
+    .h2-nav {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 60px;
+      z-index: 10;
+    }
+
+    .hero-2 { position: relative; }
+
+    .h2-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: #111;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .h2-logo span { color: #C0392B; }
+
+    .h2-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .h2-links a {
+      color: #555;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .h2-links a:hover { color: #111; }
+
+    .h2-cta-nav {
+      background: #111;
+      color: #fff !important;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-size: 13px !important;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .h2-cta-nav:hover { background: #C0392B !important; }
+
+    .h2-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 120px 64px 80px;
+    }
+
+    .h2-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FDECEA;
+      color: #C0392B;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      width: fit-content;
+    }
+
+    .h2-tag-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #C0392B;
+    }
+
+    .h2-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(38px, 4vw, 58px);
+      font-weight: 800;
+      color: #111;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      margin-bottom: 24px;
+    }
+
+    .h2-title span { color: #C0392B; }
+
+    .h2-desc {
+      font-size: 16px;
+      font-weight: 300;
+      color: #666;
+      line-height: 1.8;
+      max-width: 420px;
+      margin-bottom: 40px;
+    }
+
+    .h2-ctas { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+
+    .h2-btn-primary {
+      background: #111;
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .h2-btn-primary:hover { background: #C0392B; transform: translateY(-2px); }
+
+    .h2-btn-secondary {
+      color: #111;
+      font-size: 14px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 400;
+      transition: gap 0.2s;
+    }
+
+    .h2-btn-secondary:hover { gap: 10px; }
+
+    .h2-metrics {
+      display: flex;
+      gap: 32px;
+      margin-top: 52px;
+      padding-top: 32px;
+      border-top: 1px solid #E5E0D8;
+    }
+
+    .h2-metric { display: flex; flex-direction: column; gap: 4px; }
+
+    .h2-metric-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: #111;
+    }
+
+    .h2-metric-label { font-size: 12px; color: #999; }
+
+    .h2-right {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .h2-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .h2-img-badge {
+      position: absolute;
+      bottom: 40px;
+      left: -20px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 200px;
+    }
+
+    .h2-badge-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: #FDECEA;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .h2-badge-text { display: flex; flex-direction: column; gap: 2px; }
+    .h2-badge-text strong { font-size: 14px; color: #111; font-weight: 600; }
+    .h2-badge-text span { font-size: 12px; color: #999; }
+
+
+    /* ═══════════════════════════════════════
+       HERO 3 — PURE TEXT / TYPOGRAPHIC
+       Brand: Creative Agency | Electric Yellow-Black
+    ════════════════════════════════════════ */
+    .hero-3 {
+      min-height: 100vh;
+      background: #F5F013;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Big bold circle decoration */
+    .hero-3::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: #111;
+      opacity: 0.06;
+    }
+
+    .h3-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 32px 60px;
+      border-bottom: 2px solid #111;
+      position: relative;
+      z-index: 10;
+    }
+
+    .h3-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      color: #111;
+      letter-spacing: 3px;
+      text-decoration: none;
+    }
+
+    .h3-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .h3-links a {
+      color: rgba(17,17,17,0.5);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .h3-links a:hover { color: #111; }
+
+    .h3-contact {
+      color: #111 !important;
+      border: 2px solid #111;
+      padding: 8px 20px;
+      border-radius: 2px;
+      font-weight: 600;
+    }
+
+    .h3-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .h3-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 320px;
+      color: rgba(17,17,17,0.06);
+      position: absolute;
+      top: 50%;
+      right: -20px;
+      transform: translateY(-50%);
+      line-height: 1;
+      user-select: none;
+      letter-spacing: -10px;
+    }
+
+    .h3-overline {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #111;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      opacity: 0.6;
+    }
+
+    .h3-overline::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 2px;
+      background: #111;
+    }
+
+    .h3-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(72px, 12vw, 150px);
+      color: #111;
+      line-height: 0.88;
+      letter-spacing: 2px;
+      margin-bottom: 0;
+    }
+
+    .h3-title .outline {
+      -webkit-text-stroke: 2px #111;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      display: block;
+    }
+
+    .h3-title .red {
+      color: #fff;
+      background: #111;
+      display: inline-block;
+      padding: 0 12px;
+      line-height: 1;
+    }
+
+    .h3-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 40px 60px;
+      border-top: 2px solid #111;
+    }
+
+    .h3-desc {
+      font-size: 15px;
+      font-weight: 400;
+      color: rgba(17,17,17,0.6);
+      line-height: 1.8;
+      max-width: 380px;
+    }
+
+    .h3-cta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .h3-btn {
+      background: #111;
+      color: #F5F013;
+      padding: 16px 40px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.3s;
+    }
+
+    .h3-btn:hover { background: #333; }
+
+    .h3-scroll {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(17,17,17,0.35);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .h3-scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, rgba(17,17,17,0.35), transparent);
+    }
+
+
+    /* ═══════════════════════════════════════
+       HERO 4 — GRADIENT BACKGROUND
+       Brand: Beauty / Wellness | Soft & Elegant
+    ════════════════════════════════════════ */
+    .hero-4 {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #FDF6F0 0%, #FAE8E0 40%, #F5D5C8 100%);
+    }
+
+    .hero-4::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(192,57,43,0.08) 0%, transparent 70%);
+    }
+
+    .hero-4::after {
+      content: '';
+      position: absolute;
+      bottom: -150px;
+      left: -100px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,180,140,0.2) 0%, transparent 70%);
+    }
+
+    .h4-nav {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 60px;
+      z-index: 10;
+    }
+
+    .h4-logo {
+      font-family: 'Fraunces', serif;
+      font-size: 22px;
+      font-weight: 300;
+      font-style: italic;
+      color: #3D1A0E;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .h4-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .h4-links a {
+      color: #7A4030;
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .h4-links a:hover { color: #3D1A0E; }
+
+    .h4-shop {
+      background: #3D1A0E;
+      color: #FDF6F0 !important;
+      padding: 10px 24px;
+      border-radius: 100px;
+      font-size: 13px;
+    }
+
+    .h4-content {
+      position: relative;
+      z-index: 5;
+      padding: 0 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .h4-left { display: flex; flex-direction: column; }
+
+    .h4-tag {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #C0392B;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .h4-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(44px, 5vw, 68px);
+      font-weight: 400;
+      color: #3D1A0E;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .h4-title em { font-style: italic; color: #C0392B; }
+
+    .h4-desc {
+      font-size: 15px;
+      color: #7A5048;
+      line-height: 1.9;
+      max-width: 400px;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+
+    .h4-ctas { display: flex; gap: 16px; align-items: center; }
+
+    .h4-btn-primary {
+      background: #3D1A0E;
+      color: #FDF6F0;
+      padding: 14px 36px;
+      border-radius: 100px;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .h4-btn-primary:hover { background: #C0392B; }
+
+    .h4-btn-secondary {
+      color: #7A4030;
+      font-size: 14px;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(122,64,48,0.3);
+      padding-bottom: 2px;
+    }
+
+    .h4-right {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      position: relative;
+    }
+
+    .h4-img-main {
+      width: 300px;
+      height: 380px;
+      border-radius: 200px 200px 24px 24px;
+      object-fit: cover;
+      box-shadow: 0 24px 64px rgba(61,26,14,0.18);
+    }
+
+    .h4-img-badge {
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+      background: #fff;
+      border-radius: 16px;
+      padding: 14px 18px;
+      box-shadow: 0 8px 32px rgba(61,26,14,0.12);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .h4-badge-stars { font-size: 14px; letter-spacing: 1px; }
+    .h4-badge-info { display: flex; flex-direction: column; gap: 2px; }
+    .h4-badge-info strong { font-size: 13px; color: #3D1A0E; }
+    .h4-badge-info span { font-size: 11px; color: #aaa; }
+
+
+    /* ═══════════════════════════════════════
+       HERO 5 — DARK + GEOMETRIC SHAPES
+       Brand: PR / Strategic Comms Firm | Emerald & Gold
+    ════════════════════════════════════════ */
+    .hero-5 {
+      min-height: 100vh;
+      background: #0A1F1A;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Rich emerald gradient wash */
+    .hero-5::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 80% 50%, rgba(16,120,80,0.25) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 10% 80%, rgba(201,168,76,0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    /* Geometric shapes — gold tones now */
+    .geo-1 {
+      position: absolute;
+      top: -80px;
+      right: 120px;
+      width: 320px;
+      height: 320px;
+      border: 1px solid rgba(201,168,76,0.2);
+      transform: rotate(45deg);
+    }
+
+    .geo-2 {
+      position: absolute;
+      top: 40px;
+      right: 190px;
+      width: 220px;
+      height: 220px;
+      border: 1px solid rgba(201,168,76,0.1);
+      transform: rotate(45deg);
+    }
+
+    .geo-3 {
+      position: absolute;
+      bottom: 80px;
+      left: -60px;
+      width: 260px;
+      height: 260px;
+      border: 1px solid rgba(255,255,255,0.04);
+      transform: rotate(20deg);
+    }
+
+    .geo-accent {
+      position: absolute;
+      top: 60px;
+      right: 290px;
+      width: 70px;
+      height: 70px;
+      background: #C9A84C;
+      opacity: 0.9;
+      transform: rotate(45deg);
+    }
+
+    .h5-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 60px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .h5-logo {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .h5-logo-box {
+      width: 28px;
+      height: 28px;
+      background: #C9A84C;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: #0A1F1A;
+      flex-shrink: 0;
+    }
+
+    .h5-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .h5-links a {
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .h5-links a:hover { color: #C9A84C; }
+
+    .h5-talk {
+      border: 1px solid rgba(201,168,76,0.3);
+      color: #C9A84C !important;
+      padding: 9px 22px;
+      border-radius: 2px;
+      font-size: 11px !important;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .h5-talk:hover {
+      border-color: #C9A84C !important;
+      background: rgba(201,168,76,0.1);
+      color: #E8C97A !important;
+    }
+
+    .h5-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 0 60px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .h5-inner { max-width: 700px; }
+
+    .h5-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(201,168,76,0.35);
+      border-radius: 2px;
+      padding: 7px 16px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #C9A84C;
+      margin-bottom: 36px;
+    }
+
+    .h5-chip-line { width: 20px; height: 1px; background: #C9A84C; }
+
+    .h5-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(44px, 6vw, 80px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.05;
+      margin-bottom: 28px;
+      letter-spacing: -1px;
+    }
+
+    .h5-title em { font-style: italic; color: rgba(255,255,255,0.3); }
+    .h5-title .red { color: #C9A84C; }
+
+    .h5-desc {
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.8;
+      max-width: 480px;
+      margin-bottom: 48px;
+    }
+
+    .h5-ctas { display: flex; gap: 20px; align-items: center; }
+
+    .h5-btn-primary {
+      background: #C9A84C;
+      color: #0A1F1A;
+      padding: 15px 40px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.3s;
+    }
+
+    .h5-btn-primary:hover { background: #E8C97A; }
+
+    .h5-btn-secondary {
+      color: rgba(255,255,255,0.5);
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+
+    .h5-btn-secondary:hover { color: #fff; }
+
+    .h5-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 60px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      position: relative;
+      z-index: 5;
+    }
+
+    .h5-services {
+      display: flex;
+      gap: 32px;
+    }
+
+    .h5-service {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+      transition: color 0.2s;
+      cursor: default;
+    }
+
+    .h5-service:hover { color: rgba(255,255,255,0.6); }
+    .h5-service.active { color: #C0392B; }
+
+    .h5-social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .h5-social a {
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      font-size: 13px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .h5-social a:hover { border-color: #C0392B; color: #C0392B; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .h1-nav, .h2-nav, .h4-nav { padding: 20px 24px; }
+      .h1-links, .h2-links, .h3-links, .h4-links, .h5-links { display: none; }
+      .h1-content, .h3-content, .h5-content { padding: 0 24px; }
+      .h1-stats { left: 24px; right: 24px; gap: 20px; }
+      .hero-2 { grid-template-columns: 1fr; }
+      .h2-right { height: 300px; }
+      .h2-left { padding: 100px 24px 40px; }
+      .h4-content { grid-template-columns: 1fr; padding: 0 24px; gap: 40px; }
+      .h4-right { display: none; }
+      .h5-nav, .h5-bottom { padding: 20px 24px; }
+      .h5-services { display: none; }
+      .h3-nav, .h3-content, .h3-bottom { padding: 20px 24px; }
+      .h3-number { display: none; }
+      .h3-title { font-size: 72px; }
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <!-- ════════ HERO 1 ════════ -->
+  <div class="hero-label">Style <span>01</span> - Luxury Travel</div>
+
+  <section class="hero-1">
+    <nav class="h1-nav">
+      <a href="#" class="h1-logo">
+        Pearl of Africa
+        <small>Uganda Tours & Travel</small>
+      </a>
+      <ul class="h1-links">
+        <li><a href="#">Destinations</a></li>
+        <li><a href="#">Safari</a></li>
+        <li><a href="#">Experiences</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#" class="h1-book">Book Now</a></li>
+      </ul>
+    </nav>
+
+    <div class="h1-content">
+      <div class="h1-eyebrow">
+        <div class="h1-line"></div>
+        <span>The Pearl of Africa Awaits</span>
+      </div>
+      <h1 class="h1-title">
+        <em>Discover</em>
+        <strong>Uganda's</strong>
+        Wild Heart.
+      </h1>
+      <p class="h1-desc">From the mist of Bwindi to the shores of Lake Victoria - an unforgettable journey through Africa's most breathtaking destination.</p>
+      <div class="h1-ctas">
+        <a href="#" class="h1-btn-primary">Explore Tours</a>
+        <a href="#" class="h1-btn-secondary">Watch Film →</a>
+      </div>
+    </div>
+
+    <div class="h1-stats">
+      <div class="h1-stat">
+        <span class="h1-stat-num">40+</span>
+        <span class="h1-stat-label">Destinations</span>
+      </div>
+      <div class="h1-stat-div"></div>
+      <div class="h1-stat">
+        <span class="h1-stat-num">10+ Yrs</span>
+        <span class="h1-stat-label">Experience</span>
+      </div>
+      <div class="h1-stat-div"></div>
+      <div class="h1-stat">
+        <span class="h1-stat-num">12K+</span>
+        <span class="h1-stat-label">Happy Travellers</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════ HERO 2 ════════ -->
+  <div class="hero-label">Style <span>02</span> - Tech Startup</div>
+
+  <section class="hero-2">
+    <nav class="h2-nav">
+      <a href="#" class="h2-logo">Nova<span>AI</span></a>
+      <ul class="h2-links">
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Sign In</a></li>
+        <li><a href="#" class="h2-cta-nav">Get Started</a></li>
+      </ul>
+    </nav>
+
+    <div class="h2-left">
+      <div class="h2-tag">
+        <div class="h2-tag-dot"></div>
+        Now in Public Beta
+      </div>
+      <h1 class="h2-title">
+        Build smarter.<br>
+        Ship <span>faster.</span><br>
+        Grow boldly.
+      </h1>
+      <p class="h2-desc">The AI-powered platform that helps growing teams automate their workflows, understand their data, and make better decisions without the complexity.</p>
+      <div class="h2-ctas">
+        <a href="#" class="h2-btn-primary">Start for Free →</a>
+        <a href="#" class="h2-btn-secondary">Watch Demo ↗</a>
+      </div>
+      <div class="h2-metrics">
+        <div class="h2-metric">
+          <span class="h2-metric-num">50K+</span>
+          <span class="h2-metric-label">Active users</span>
+        </div>
+        <div class="h2-metric">
+          <span class="h2-metric-num">4.9★</span>
+          <span class="h2-metric-label">App Store rating</span>
+        </div>
+        <div class="h2-metric">
+          <span class="h2-metric-num">99.9%</span>
+          <span class="h2-metric-label">Uptime SLA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="h2-right">
+      <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80" alt="Team working">
+      <div class="h2-img-badge">
+        <div class="h2-badge-icon">🚀</div>
+        <div class="h2-badge-text">
+          <strong>Just launched!</strong>
+          <span>NovaAI v2.0 is live</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════ HERO 3 ════════ -->
+  <div class="hero-label">Style <span>03</span> - Creative Agency</div>
+
+  <section class="hero-3">
+    <nav class="h3-nav">
+      <a href="#" class="h3-logo">KODE STUDIO</a>
+      <ul class="h3-links">
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#" class="h3-contact">Let's Talk →</a></li>
+      </ul>
+    </nav>
+
+    <div class="h3-content">
+      <div class="h3-number">01</div>
+      <div class="h3-overline">Creative Digital Agency</div>
+      <h1 class="h3-title">
+        WE BUILD
+        <span class="outline">BRANDS</span>
+        <span class="red">THAT LAST.</span>
+      </h1>
+    </div>
+
+    <div class="h3-bottom">
+      <p class="h3-desc">We are a Kampala-based creative studio helping ambitious brands tell their story through design, strategy and code.</p>
+      <div class="h3-cta">
+        <a href="#" class="h3-btn">See Our Work</a>
+        <div class="h3-scroll">
+          <div class="h3-scroll-line"></div>
+          Scroll
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════ HERO 4 ════════ -->
+  <div class="hero-label">Style <span>04</span> - Beauty / Wellness Brand</div>
+
+  <section class="hero-4">
+    <nav class="h4-nav">
+      <a href="#" class="h4-logo">Lumière Beauty</a>
+      <ul class="h4-links">
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Ingredients</a></li>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#" class="h4-shop">Shop Now</a></li>
+      </ul>
+    </nav>
+
+    <div class="h4-content">
+      <div class="h4-left">
+        <span class="h4-tag">Natural · Sustainable · Luxurious</span>
+        <h1 class="h4-title">
+          Skincare that<br>
+          <em>truly loves</em><br>
+          you back.
+        </h1>
+        <p class="h4-desc">Formulated with the finest natural ingredients from across Africa - because your skin deserves nothing but the purest care.</p>
+        <div class="h4-ctas">
+          <a href="#" class="h4-btn-primary">Shop Collection</a>
+          <a href="#" class="h4-btn-secondary">Learn More →</a>
+        </div>
+      </div>
+      <div class="h4-right">
+        <img
+          src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80"
+          alt="Skincare product"
+          class="h4-img-main"
+        >
+        <div class="h4-img-badge">
+          <div class="h4-badge-stars">⭐⭐⭐⭐⭐</div>
+          <div class="h4-badge-info">
+            <strong>4.9 / 5.0</strong>
+            <span>From 2,400+ reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════ HERO 5 ════════ -->
+  <div class="hero-label">Style <span>05</span> - PR & Strategic Comms Firm</div>
+
+  <section class="hero-5">
+    <div class="geo-1"></div>
+    <div class="geo-2"></div>
+    <div class="geo-3"></div>
+    <div class="geo-accent"></div>
+
+    <nav class="h5-nav">
+      <a href="#" class="h5-logo">
+        <div class="h5-logo-box">N</div>
+        NAKATO & CO.
+      </a>
+      <ul class="h5-links">
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Insights</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#" class="h5-talk">Let's Talk</a></li>
+      </ul>
+    </nav>
+
+    <div class="h5-content">
+      <div class="h5-inner">
+        <div class="h5-chip">
+          <div class="h5-chip-line"></div>
+          Strategic Communications
+        </div>
+        <h1 class="h5-title">
+          Your story.<br>
+          <em>Told with</em><br>
+          <span class="red">precision.</span>
+        </h1>
+        <p class="h5-desc">We help brands, leaders and organisations craft communications strategies that build trust, shape perception and drive real results.</p>
+        <div class="h5-ctas">
+          <a href="#" class="h5-btn-primary">Start a Project</a>
+          <a href="#" class="h5-btn-secondary">View Case Studies →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="h5-bottom">
+      <div class="h5-services">
+        <span class="h5-service active">PR Strategy</span>
+        <span class="h5-service">Media Relations</span>
+        <span class="h5-service">Crisis Comms</span>
+        <span class="h5-service">Brand Positioning</span>
+        <span class="h5-service">Digital PR</span>
+      </div>
+      <div class="h5-social">
+        <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+</html>
